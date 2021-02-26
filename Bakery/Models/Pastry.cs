@@ -12,7 +12,7 @@ namespace Bakery.Models
 
   public int Price(int amount)
     {
-      return 0;
+      return 5*(amount/3) + 2*(amount%3);
     }
   }
 }

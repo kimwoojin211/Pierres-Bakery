@@ -29,15 +29,15 @@ namespace Bakery.Tests
     public void BreadPrice_ReturnsBreadPrice_Int()
     {
       Bread NewBread = new Bread();
-      int price = NewBread.Price(4); // only dollars, so only ints needed. no decimals.
-      Assert.AreEqual(price, 15);
+      int price = NewBread.Price(23); // only dollars, so only ints needed. no decimals.
+      Assert.AreEqual(80,price);
     }
     [TestMethod]
     public void PastryPrice_ReturnsPastryPrice_Int()
     {
       Pastry NewPastry = new Pastry();
       int price = NewPastry.Price(4); // only dollars, so only ints needed. no decimals.
-      Assert.AreEqual(price, 15);
+      Assert.AreEqual(7,price);
     }
   }
 }
