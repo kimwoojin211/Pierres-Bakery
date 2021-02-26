@@ -13,14 +13,14 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceofBread_Bread()
     {
-      Bread NewBread = new Bread();
+      Bread NewBread = new Bread(4);
       Assert.AreEqual(typeof(Bread), NewBread.GetType());
     }
     [TestMethod]
     public void PastryConstructor_CreatesInstanceofPastry_Pastry()
     {
 
-      Pastry NewPastry = new Pastry();
+      Pastry NewPastry = new Pastry(255);
       Assert.AreEqual(typeof(Pastry), NewPastry.GetType());
     }
 
@@ -28,26 +28,30 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadPrice_ReturnsBreadPrice_Int()
     {
-      int price = Bread.Price("23"); // only dollars, so only ints needed. no decimals.
+      Bread NewBread = new Bread(23);
+      int price = NewBread.Price();
       Assert.AreEqual(80,price);
     }
 
     [TestMethod]
     public void BreadPrice_ReturnsNegativeOneOnInvalidInput_Int()
     {
-      int price = Bread.Price("abc");
-      Assert.AreEqual(-1, price);
+      Bread NewBread = new Bread(-4);
+      int price = NewBread.Price();
+      Assert.AreEqual(-4, price);
     }
     [TestMethod]
     public void PastryPrice_ReturnsPastryPrice_Int()
     {
-      int price = Pastry.Price("4"); // only dollars, so only ints needed. no decimals.
+      Pastry NewPastry = new Pastry(4);
+      int price = NewPastry.Price(); 
       Assert.AreEqual(7,price);
     }
     [TestMethod]
     public void PastryPrice_ReturnsNegativeOneOnInvalidInput_Int()
     {
-      int price = Pastry.Price("-153"); // only dollars, so only ints needed. no decimals.
+      Pastry NewPastry = new Pastry(-153);
+      int price = NewPastry.Price();
       Assert.AreEqual(-153, price);
     }
   }
