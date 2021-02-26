@@ -25,8 +25,6 @@ namespace Bakery
       Console.WriteLine("SUPERDEALSUPERDEALSUPERDEALSUPERDEALSUPERDEAL");
       Console.WriteLine("");
 
-      // Bread bread = new Bread();
-      // Pastry pastry = new Pastry();
       Console.WriteLine("Please enter the number of loaves of bread you would like. (Positive integers only.)");
       int totalBreadPrice = -1;
       while(totalBreadPrice<0)

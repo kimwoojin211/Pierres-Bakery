@@ -1,5 +1,5 @@
 /*
-uhh. is this allowed? to just have one test file? or do we need to have one test file per cs file.
+need to delete all the Bread and Pastry constructors now that price is a static method.
 */
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -28,16 +28,27 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadPrice_ReturnsBreadPrice_Int()
     {
-      Bread NewBread = new Bread();
-      int price = NewBread.Price(23); // only dollars, so only ints needed. no decimals.
+      int price = Bread.Price("23"); // only dollars, so only ints needed. no decimals.
       Assert.AreEqual(80,price);
+    }
+
+    [TestMethod]
+    public void BreadPrice_ReturnsNegativeOneOnInvalidInput_Int()
+    {
+      int price = Bread.Price("abc");
+      Assert.AreEqual(-1, price);
     }
     [TestMethod]
     public void PastryPrice_ReturnsPastryPrice_Int()
     {
-      Pastry NewPastry = new Pastry();
-      int price = NewPastry.Price(4); // only dollars, so only ints needed. no decimals.
+      int price = Pastry.Price("4"); // only dollars, so only ints needed. no decimals.
       Assert.AreEqual(7,price);
+    }
+    [TestMethod]
+    public void PastryPrice_ReturnsNegativeOneOnInvalidInput_Int()
+    {
+      int price = Pastry.Price("-153"); // only dollars, so only ints needed. no decimals.
+      Assert.AreEqual(-153, price);
     }
   }
 }
