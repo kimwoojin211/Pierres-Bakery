@@ -1,0 +1,16 @@
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.csprojAssemblyReference.cache
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.GeneratedMSBuildEditorConfig.editorconfig
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.AssemblyInfoInputs.cache
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.AssemblyInfo.cs
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.csproj.CoreCompileInputs.cache
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.exe
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.deps.json
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.runtimeconfig.json
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.runtimeconfig.dev.json
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.dll
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\ref\Bakery.dll
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\bin\Debug\net5.0\Bakery.pdb
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.dll
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\ref\Bakery.dll
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.pdb
+W:\Dropbox\Documents\Epicodus\indiv\Bakery.Solution\Bakery\obj\Debug\net5.0\Bakery.genruntimeconfig.cache
