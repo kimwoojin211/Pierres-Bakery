@@ -1,9 +1,14 @@
+
+/*
+Changing Price method to amount method. going to add another Price method, but make it abstract.
+*/
 using System;
 namespace Bakery.Models
 {
   public abstract class BakedGood
   {
-    public virtual int Price(string input)
+    public abstract int Price();
+    public static int NumberOf(string input)
     {
       int amount = -1;
       try

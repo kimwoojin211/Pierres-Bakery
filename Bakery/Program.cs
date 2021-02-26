@@ -1,4 +1,6 @@
 /*
+changing Price methods back to static
+
 */
 using System;
 using Bakery.Models;
@@ -23,20 +25,22 @@ namespace Bakery
       Console.WriteLine("SUPERDEALSUPERDEALSUPERDEALSUPERDEALSUPERDEAL");
       Console.WriteLine("");
 
-      Bread bread = new Bread();
-      Pastry pastry = new Pastry();
-      int totalBreadPrice = -1, totalPastryPrice = -1;
-      
+      int breadAmount = -1, pastryAmount = -1;
       Console.WriteLine("Please enter the number of loaves of bread you would like. (Positive integers only.)");
-      while(totalBreadPrice<0)
+      while(breadAmount < 0)
       {
-        totalBreadPrice = bread.Price(Console.ReadLine());
+        breadAmount = BakedGood.NumberOf(Console.ReadLine());
       }
       Console.WriteLine("Please enter the number of pastries you would like. (Positive integers only.)");
-      while(totalPastryPrice<0)
+      while(pastryAmount < 0)
       {
-        totalPastryPrice = pastry.Price(Console.ReadLine());
-      };
+        pastryAmount = BakedGood.NumberOf(Console.ReadLine());
+      }
+      Bread bread = new Bread(breadAmount);
+      Pastry pastry = new Pastry(pastryAmount);
+      int totalBreadPrice = bread.Price();
+      int totalPastryPrice = pastry.Price();
+
       Console.WriteLine($"Your total amount is ${totalBreadPrice + totalPastryPrice}");
     }
   }

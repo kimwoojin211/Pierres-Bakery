@@ -1,18 +1,23 @@
 /*
-SO CLEANNNNNNNNNNNNN
+i need auto-implemented properties
+
+changing Price methods from virtual/overridden to static because i'm no longer calling Bakedgood's method price, since it's not finding the price anymore, it's just checking for a valid amount input.
+so I'm losing the overriding feature for price, but now i'll be able to use static, and get rid of the Bread and Pastry objects in Program.cs
 */
 namespace Bakery.Models
 {
   public class Bread : BakedGood
   {
-    public Bread()
+    public int Amount { get; set; }
+    
+    public Bread(int input)
     {
+      Amount = input;      
     }
 
-    public override int Price(string input)
+    public override int Price()
     {
-      int amount = base.Price(input);      
-      return amount>0 ? (5*amount - 5*(amount/3)) : amount;
+      return Amount>0 ? (5*Amount - 5*(Amount/3)) : Amount;
     }
   }
 }
