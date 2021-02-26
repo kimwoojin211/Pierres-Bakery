@@ -1,3 +1,6 @@
+/*
+
+*/
 namespace Bakery.Models
 {
   public class Pastry
@@ -5,6 +8,11 @@ namespace Bakery.Models
     public Pastry()
     {
 
+    }
+
+  public int Price(int amount)
+    {
+      return 0;
     }
   }
 }
