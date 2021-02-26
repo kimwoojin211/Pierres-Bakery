@@ -25,19 +25,19 @@ namespace Bakery
       Console.WriteLine("SUPERDEALSUPERDEALSUPERDEALSUPERDEALSUPERDEAL");
       Console.WriteLine("");
 
-      Bread bread = new Bread();
-      Pastry pastry = new Pastry();
+      // Bread bread = new Bread();
+      // Pastry pastry = new Pastry();
       Console.WriteLine("Please enter the number of loaves of bread you would like. (Positive integers only.)");
       int totalBreadPrice = -1;
       while(totalBreadPrice<0)
       {
-        totalBreadPrice = bread.Price(Console.ReadLine());
+        totalBreadPrice = Bread.Price(Console.ReadLine());
       }
       Console.WriteLine("Please enter the number of pastries you would like. (Positive integers only.)");
       int totalPastryPrice = -1;
       while(totalPastryPrice<0)
       {
-        totalPastryPrice = pastry.Price(Console.ReadLine());
+        totalPastryPrice = Pastry.Price(Console.ReadLine());
       };
       Console.WriteLine($"Your total amount is ${totalBreadPrice + totalPastryPrice}");
     }
