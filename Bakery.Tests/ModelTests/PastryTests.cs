@@ -1,5 +1,5 @@
 /*
-imma keep these in the folder for now, but i think i don't need these individual ones anymore
+imma keep these in the folder for now, but i think i don't need these individual test files anymore
 */
 
 // using Microsoft.VisualStudio.TestTools.UnitTesting;
