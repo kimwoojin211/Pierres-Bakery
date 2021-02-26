@@ -31,17 +31,17 @@ namespace Bakery.Models
       catch (FormatException) // inspo from https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse?view=net-5.0
       {
         Console.WriteLine("Non-integer detected. Please enter a positive integer.");
-        askAmount();
+        amount = askAmount();
       }
       catch(OverflowException)
       {
         Console.WriteLine("Overflow detected. Please enter a smaller positive integer (<=2,147,483,647");
-        askAmount();
+        amount = askAmount();
       }
       catch (ArgumentException ex)
       {
         Console.WriteLine(ex.Message); // https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception.message?view=netframework-4.8#System_ArgumentException_Message
-        askAmount();
+        amount = askAmount();
       }
       return amount;
     }
