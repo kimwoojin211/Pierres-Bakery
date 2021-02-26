@@ -1,5 +1,6 @@
 /*
-need to delete all the Bread and Pastry constructors now that price is a static method.
+need to add BakedGoods tests
+deleting negative price tests because price methods can no longer receive negative inputs (filtered by BakedGood.NumberOf))
 */
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -34,13 +35,6 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void BreadPrice_ReturnsNegativeOneOnInvalidInput_Int()
-    {
-      Bread NewBread = new Bread(-4);
-      int price = NewBread.Price();
-      Assert.AreEqual(-4, price);
-    }
-    [TestMethod]
     public void PastryPrice_ReturnsPastryPrice_Int()
     {
       Pastry NewPastry = new Pastry(4);
@@ -48,11 +42,29 @@ namespace Bakery.Tests
       Assert.AreEqual(7,price);
     }
     [TestMethod]
-    public void PastryPrice_ReturnsNegativeOneOnInvalidInput_Int()
+    public void BakedGoodAmount_ReturnsArgIfPositiveInteger_Int()
     {
-      Pastry NewPastry = new Pastry(-153);
-      int price = NewPastry.Price();
+      int price = BakedGood.NumberOf(3888);
+      Assert.AreEqual(3888, price);
+    }
+    [TestMethod]
+    public void BakedGoodAmount_ReturnsNegativeOnNegativeInt_Int()
+    {
+      int price = BakedGood.NumberOf(-153);
       Assert.AreEqual(-153, price);
+    }
+    [TestMethod]
+    public void BakedGoodAmount_ReturnsNegativeOneOnNonInteger_Int()
+    {
+      int price = BakedGood.NumberOf(35.23353);
+      Assert.AreEqual(-1, price);
+    }
+
+    [TestMethod]
+    public void BakedGoodAmount_ReturnsNegativeOneOnInvalidString_Int()
+    {
+      int price = BakedGood.NumberOf("hello Epicodus Staff");
+      Assert.AreEqual(-1, price);
     }
   }
 }

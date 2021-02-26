@@ -10,11 +10,11 @@ namespace Bakery.Models
     public abstract int Price();
     public static int NumberOf(string input)
     {
-      int amount = -1;
+      int num = -1;
       try
       {
-        amount = Int32.Parse(input);
-        if (amount < 0)
+        num = Int32.Parse(input);
+        if (num < 0)
         {
           throw new ArgumentException("Negative amount detected. Please enter a positive integer."); // inspo from https://www.dotnetperls.com/throw && https://www.tutorialsteacher.com/csharp/csharp-exception
         }
@@ -31,7 +31,7 @@ namespace Bakery.Models
       {
         Console.WriteLine(ex.Message); // https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception.message?view=netframework-4.8#System_ArgumentException_Message
       }
-      return amount;
+      return num;
     }
   }
 }

@@ -1,8 +1,5 @@
 /*
-i need auto-implemented properties
-
-changing Price methods from virtual/overridden to static because i'm no longer calling Bakedgood's method price, since it's not finding the price anymore, it's just checking for a valid amount input.
-so I'm losing the overriding feature for price, but now i'll be able to use static, and get rid of the Bread and Pastry objects in Program.cs
+ternary operator no longer needed because all negative inputs should be filtered through BakedGood's NumberOf method.
 */
 namespace Bakery.Models
 {
@@ -17,7 +14,7 @@ namespace Bakery.Models
 
     public override int Price()
     {
-      return Amount>0 ?  5*(Amount/3) + 2*(Amount%3) : Amount;
+      return 5*(Amount/3) + 2*(Amount%3);
     }
 
   }
