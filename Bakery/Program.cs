@@ -29,12 +29,12 @@ namespace Bakery
 
       int breadAmount, pastryAmount;
       int totalBreadAmount = 0, totalPastryAmount = 0;
-      string choice = "";
-      while(choice != "TOTAL")
+      string input = "";
+      while(input != "TOTAL") // allows user to select and add more bread or pastries until "total" is entered into the terminal;
       {
-        Console.WriteLine("Enter \"Bread\" or \"Pastry\" (Case Insensitive), or enter \"Total\" to calculate the total cost of your order)");
-        choice = Console.ReadLine().ToUpper();
-        switch(choice)
+        Console.WriteLine("Enter \"Bread\" or \"Pastry\" (case insensitive) to purchase your desired baked good, or enter \"Total\" to calculate the total cost of your order)");
+        input = Console.ReadLine().ToUpper();
+        switch(input)
         {
           case "BREAD":
             breadAmount = -1;
@@ -61,12 +61,11 @@ namespace Bakery
             break;
         }
       }
+      //Total bread and pastry amounts are determined. Determine total price.
       Bread bread = new Bread(totalBreadAmount);
       Pastry pastry = new Pastry(totalPastryAmount);
-      int totalBreadPrice = bread.Price();
-      int totalPastryPrice = pastry.Price();
       int fiveForThree = 2*((totalBreadAmount+totalPastryAmount)/5);
-      Console.WriteLine($"Your total of {totalBreadAmount} loaves and {totalPastryAmount} pastries comes out to ${totalBreadPrice + totalPastryPrice - fiveForThree}");
+      Console.WriteLine($"Your total of {totalBreadAmount} loaves and {totalPastryAmount} pastries comes out to ${bread.Price() + pastry.Price() - fiveForThree}");
     }
   }
 }

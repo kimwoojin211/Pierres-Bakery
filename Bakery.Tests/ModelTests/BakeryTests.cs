@@ -1,6 +1,4 @@
 /*
-need to add BakedGoods tests
-deleting negative price tests because price methods can no longer receive negative inputs (filtered by BakedGood.NumberOf))
 */
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -24,8 +22,6 @@ namespace Bakery.Tests
       Pastry NewPastry = new Pastry(255);
       Assert.AreEqual(typeof(Pastry), NewPastry.GetType());
     }
-
-
     [TestMethod]
     public void BreadPrice_ReturnsBreadPrice_Int()
     {
@@ -33,7 +29,6 @@ namespace Bakery.Tests
       int price = NewBread.Price();
       Assert.AreEqual(80,price);
     }
-
     [TestMethod]
     public void PastryPrice_ReturnsPastryPrice_Int()
     {
@@ -48,10 +43,10 @@ namespace Bakery.Tests
       Assert.AreEqual(3888, price);
     }
     [TestMethod]
-    public void BakedGoodAmount_ReturnsNegativeOnNegativeInt_Int()
+    public void BakedGoodAmount_ReturnsNegativeOneOnNegativeInt_Int()
     {
       int price = BakedGood.NumberOf(-153);
-      Assert.AreEqual(-153, price);
+      Assert.AreEqual(-1, price);
     }
     [TestMethod]
     public void BakedGoodAmount_ReturnsNegativeOneOnNonInteger_Int()
@@ -59,7 +54,6 @@ namespace Bakery.Tests
       int price = BakedGood.NumberOf(35.23353);
       Assert.AreEqual(-1, price);
     }
-
     [TestMethod]
     public void BakedGoodAmount_ReturnsNegativeOneOnInvalidString_Int()
     {

@@ -1,5 +1,4 @@
 /*
-ternary operator no longer needed because all negative inputs should be filtered through BakedGood's NumberOf method.
 */
 namespace Bakery.Models
 {
@@ -9,9 +8,9 @@ namespace Bakery.Models
 
     public Pastry(int input)
     {
-      Amount = input;    
+      Amount = input; // negatives already filtered
     }
-
+    // 1 for $2, 2 for $3
     public override int Price()
     {
       return 5*(Amount/3) + 2*(Amount%3);
