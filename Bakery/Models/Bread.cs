@@ -1,5 +1,3 @@
-/*
-*/
 namespace Bakery.Models
 {
   public class Bread : BakedGood
@@ -8,12 +6,11 @@ namespace Bakery.Models
     
     public Bread(int input)
     {
-      Amount = input; // negatives already filtered
+      Amount = input;
     }
 
     public override int Price()
     {
-      // $5, buy 2 get 1 free
       return 5*Amount - 5*(Amount/3);
     }
   }

@@ -1,7 +1,3 @@
-/*
-changing Price methods back to static
-
-*/
 using System;
 using Bakery.Models;
 
@@ -30,7 +26,7 @@ namespace Bakery
       int breadAmount, pastryAmount;
       int totalBreadAmount = 0, totalPastryAmount = 0;
       string input = "";
-      while(input != "TOTAL") // allows user to select and add more bread or pastries until "total" is entered into the terminal;
+      while(input != "TOTAL") 
       {
         Console.WriteLine("Enter \"Bread\" or \"Pastry\" (case insensitive) to purchase your desired baked good, or enter \"Total\" to calculate the total cost of your order)");
         input = Console.ReadLine().ToUpper();
@@ -61,7 +57,6 @@ namespace Bakery
             break;
         }
       }
-      //Total bread and pastry amounts are determined. Determine total price.
       Bread bread = new Bread(totalBreadAmount);
       Pastry pastry = new Pastry(totalPastryAmount);
       int fiveForThree = 2*((totalBreadAmount+totalPastryAmount)/5);
